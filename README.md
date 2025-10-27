@@ -87,3 +87,9 @@
 - Все параметры (радиус, скорость, коэффициент упругости) можно легко настраивать  
 
 ---
+
+## Автор
+
+- **Имя:** Туголбаева Айза  
+- **Email:** tugolbaevaaiza@gmail.com  
+- **GitHub:** [https://github.com/Aizakeshka](https://github.com/Aizakeshka)

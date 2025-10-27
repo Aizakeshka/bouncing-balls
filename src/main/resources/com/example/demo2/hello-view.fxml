@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.demo2.HelloController"
+            prefWidth="900" prefHeight="600"
+            style="-fx-background-color: linear-gradient(to bottom, #007700, #004400);">
+
+    <children>
+        <!-- Поле (canvas) -->
+        <Canvas fx:id="canvas"
+                layoutX="50"
+                layoutY="100"
+                width="800"
+                height="450"/>
+
+        <!-- Кнопки управления -->
+        <Button fx:id="startButton"
+                text="▶ Старт"
+                layoutX="50"
+                layoutY="30"
+                prefWidth="90"
+                style="-fx-font-size:14; -fx-background-color:#22aa22; -fx-text-fill:white;"/>
+
+        <Button fx:id="stopButton"
+                text="⏸ Стоп"
+                layoutX="150"
+                layoutY="30"
+                prefWidth="90"
+                style="-fx-font-size:14; -fx-background-color:#cc2222; -fx-text-fill:white;"/>
+
+        <Button fx:id="addBallButton"
+                text="+ Мяч"
+                layoutX="250"
+                layoutY="30"
+                prefWidth="90"
+                style="-fx-font-size:14; -fx-background-color:#2288cc; -fx-text-fill:white;"/>
+
+        <Button fx:id="resetButton"
+                text="🔄 Сброс"
+                layoutX="350"
+                layoutY="30"
+                prefWidth="90"
+                style="-fx-font-size:14; -fx-background-color:#ffaa00; -fx-text-fill:white;"/>
+
+        <!-- Счётчик мячей -->
+        <Label fx:id="ballCountLabel"
+               text="Мячей: 1"
+               layoutX="470"
+               layoutY="35"
+               style="-fx-font-size:16; -fx-text-fill:white; -fx-font-weight:bold;"/>
+
+    </children>
+</AnchorPane>

@@ -45,7 +45,7 @@
 ## 4. Video Link
 
 Для наглядной демонстрации работы проекта мое видео:  
-Ссылка на видео: https://your-video-link.com
+Ссылка на видео: https://drive.google.com/drive/folders/1oNHGWbzQdw94X93z7b_PIY4TqCt8h3gc?usp=drive_link
 
 ---
 

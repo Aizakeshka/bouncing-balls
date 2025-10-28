@@ -28,21 +28,18 @@ public class HelloController {
     private Image ballImage;
     private Image backgroundImage;
 
-    private static final double WALL_RESTITUTION = 1.0; // полная упругость
-    private static final double SPEED_LIMIT = 400;      // ограничение скорости
+    private static final double WALL_RESTITUTION = 1.0; 
+    private static final double SPEED_LIMIT = 400;    
 
     @FXML
     public void initialize() {
         GraphicsContext gc = canvas.getGraphicsContext2D();
 
-        // Загружаем фон и мяч
         backgroundImage = new Image(getClass().getResourceAsStream("/com/example/demo2/images/field.png"));
         ballImage = new Image(getClass().getResourceAsStream("/com/example/demo2/images/ball2-round.png"));
 
-        // Первый мяч
         balls.add(new Ball(canvas.getWidth() / 2, canvas.getHeight() / 2));
 
-        // Кнопки
         startButton.setOnAction(e -> running = true);
         stopButton.setOnAction(e -> running = false);
         addBallButton.setOnAction(e -> balls.add(new Ball(Math.random() * canvas.getWidth(), 50)));
@@ -51,10 +48,8 @@ public class HelloController {
             balls.add(new Ball(canvas.getWidth() / 2, canvas.getHeight() / 2));
         });
 
-        // Клик мышкой добавляет новый мяч
         canvas.setOnMouseClicked(e -> balls.add(new Ball(e.getX(), e.getY())));
 
-        // Таймер
         timer = new AnimationTimer() {
             private long last = 0;
             @Override
@@ -75,11 +70,9 @@ public class HelloController {
 
     private void update(double dt) {
         for (Ball b : balls) {
-            // Обновляем координаты
             b.x += b.dx * dt;
             b.y += b.dy * dt;
 
-            // Отскок от стен
             if (b.y + b.radius > canvas.getHeight()) {
                 b.y = canvas.getHeight() - b.radius;
                 b.dy = -b.dy * WALL_RESTITUTION;
@@ -97,7 +90,6 @@ public class HelloController {
                 b.dx = -b.dx * WALL_RESTITUTION;
             }
 
-            // Ограничение скорости, чтобы не улетали слишком быстро
             if (b.dx > SPEED_LIMIT) b.dx = SPEED_LIMIT;
             if (b.dx < -SPEED_LIMIT) b.dx = -SPEED_LIMIT;
             if (b.dy > SPEED_LIMIT) b.dy = SPEED_LIMIT;
@@ -131,7 +123,6 @@ public class HelloController {
         Ball(double x, double y) {
             this.x = x;
             this.y = y;
-            // случайная начальная скорость
             this.dx = (Math.random() - 0.5) * 400;
             this.dy = (Math.random() - 0.5) * 400;
         }

@@ -12,14 +12,12 @@
             style="-fx-background-color: linear-gradient(to bottom, #007700, #004400);">
 
     <children>
-        <!-- Поле (canvas) -->
         <Canvas fx:id="canvas"
                 layoutX="50"
                 layoutY="100"
                 width="800"
                 height="450"/>
 
-        <!-- Кнопки управления -->
         <Button fx:id="startButton"
                 text="▶ Старт"
                 layoutX="50"
@@ -48,7 +46,6 @@
                 prefWidth="90"
                 style="-fx-font-size:14; -fx-background-color:#ffaa00; -fx-text-fill:white;"/>
 
-        <!-- Счётчик мячей -->
         <Label fx:id="ballCountLabel"
                text="Мячей: 1"
                layoutX="470"

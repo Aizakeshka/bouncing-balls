@@ -13,7 +13,6 @@ public class HelloApplication extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
         primaryStage.setTitle("Bouncing Ball");
         Scene scene = new Scene(root);
-        // можно добавить стили (css) если нужно
         primaryStage.setScene(scene);
         primaryStage.setWidth(900);
         primaryStage.setHeight(600);
